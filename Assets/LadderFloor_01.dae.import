@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Stairs_01.dae-3197e67d917440660b16e028be84c7b8.scn"
+path="res://.import/LadderFloor_01.dae-6a48086561bbf8c09f1d4cebb34bcf18.scn"
 
 [deps]
 
-source_file="res://Assets/Stairs_01.dae"
-dest_files=[ "res://.import/Stairs_01.dae-3197e67d917440660b16e028be84c7b8.scn" ]
+source_file="res://Assets/LadderFloor_01.dae"
+dest_files=[ "res://.import/LadderFloor_01.dae-6a48086561bbf8c09f1d4cebb34bcf18.scn" ]
 
 [params]
 
