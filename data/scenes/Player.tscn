@@ -17,6 +17,8 @@ extents = Vector3( 0.5, 0.5, 1 )
 
 [node name="Player" type="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.789563, 0.0496341, 9.53674e-07 )
+collision_layer = 32769
+collision_mask = 32769
 script = ExtResource( 5 )
 
 [node name="Pivot" type="Spatial" parent="."]
