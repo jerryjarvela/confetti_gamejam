@@ -6,10 +6,22 @@ var jump_velocity: float = 25
 var velocity: Vector3
 onready var character_sprite: Spatial = $Character
 onready var animation_player: AnimationPlayer = $Viewport/Character/AnimationPlayer
+onready var FLAG = false
+#the flag-true var
 
 func _ready():
+	$Sprite3D.visible = false
+	$Sprite3D2.visible = false
 	move_lock_z = true
 	animation_player.stop()
+
+
+func _physics_process(delta):
+	Use_Flag()
+	Disable_Flag()
+	
+
+
 
 func _process(delta):
 	var direction: Vector3 = Vector3.ZERO;
@@ -32,3 +44,42 @@ func _process(delta):
 	else:
 		print(animation_player.get_default_blend_time())
 		animation_player.play("Idle")
+
+
+func _on_FlagArea_area_entered(area):
+	if FLAG != true:
+		if area.is_in_group("Enemy"):
+			print(FLAG)
+			$Sprite3D.visible = true
+			print("GET.WRECKED.")
+			#$Detection_Timer.start()
+		
+
+
+
+func _on_Detection_Timer_timeout():
+	$Sprite3D.visible = true #YOU SHOULD BE DEAD NOW.
+	
+
+func _on_FlagArea_area_exited(area):
+		print("safe")
+		$Sprite3D.visible = false
+
+
+
+func Use_Flag():
+	if Input.is_action_pressed("Click"):
+		print(FLAG)
+		var FLAG = true
+		$Pivot/Camera/SpotLight.spot_range = 244.5
+		$Flashlight.visible = false
+		$Sprite3D2.visible = true
+		
+
+
+func Disable_Flag():
+	if Input.is_action_just_released("Click"):
+		var FLAG = false
+		$Pivot/Camera/SpotLight.spot_range = 72.6
+		$Flashlight.visible = true
+		$Sprite3D2.visible = false
