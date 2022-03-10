@@ -71,7 +71,8 @@ func Use_Flag():
 	if Input.is_action_pressed("Click"):
 		print(FLAG)
 		var FLAG = true
-		$Pivot/Camera/SpotLight.spot_range = 244.5
+		$Pivot/Camera/SpotLight.light_energy = 20
+		$Pivot/Camera/SpotLight.spot_angle = 6
 		$Flashlight.visible = false
 		$Sprite3D2.visible = true
 		
@@ -80,6 +81,7 @@ func Use_Flag():
 func Disable_Flag():
 	if Input.is_action_just_released("Click"):
 		var FLAG = false
-		$Pivot/Camera/SpotLight.spot_range = 72.6
+		$Pivot/Camera/SpotLight.light_energy = 10
+		$Pivot/Camera/SpotLight.spot_angle = 2.99
 		$Flashlight.visible = true
 		$Sprite3D2.visible = false
