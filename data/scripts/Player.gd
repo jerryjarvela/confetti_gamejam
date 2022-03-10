@@ -24,6 +24,17 @@ func _physics_process(delta):
 
 
 func _process(delta):
+	# controls for quitting and restarting the game
+	if (Input.is_action_just_pressed("ui_cancel")):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().quit()
+	if (Input.is_action_just_pressed("restart")):
+		var err = get_tree().reload_current_scene()
+		if err: print("Scene reload error: " + err)
+	
+	
+	
+	
 	var direction: Vector3 = Vector3.ZERO;
 	velocity.x = walk_speed * (Input.get_action_strength("right") - Input.get_action_strength("left"))
 	if Input.is_action_just_pressed("jump") : velocity.y = jump_velocity
@@ -37,21 +48,21 @@ func _process(delta):
 	# animation	
 	if (Input.get_action_strength("right") - Input.get_action_strength("left") != 0):
 		if (Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right")):
-			animation_player.stop() # two prevent blending
+			animation_player.stop() # to prevent animation blending, or whatever is causing the animations to be too slow
 			pass
 		animation_player.play("Walking") # play animation
 		character_sprite.flip_h = Input.is_action_pressed("left") # flip the sprite if going left
 	else:
-		print(animation_player.get_default_blend_time())
+		#print(animation_player.get_default_blend_time())
 		animation_player.play("Idle")
 
 
 func _on_FlagArea_area_entered(area):
 	if FLAG != true:
 		if area.is_in_group("Enemy"):
-			print(FLAG)
+			#print(FLAG)
 			$Sprite3D.visible = true
-			print("GET.WRECKED.")
+			#print("GET.WRECKED.")
 			#$Detection_Timer.start()
 		
 
@@ -62,14 +73,14 @@ func _on_Detection_Timer_timeout():
 	
 
 func _on_FlagArea_area_exited(area):
-		print("safe")
+		#print("safe")
 		$Sprite3D.visible = false
 
 
 
 func Use_Flag():
 	if Input.is_action_pressed("Click"):
-		print(FLAG)
+		#print(FLAG)
 		var FLAG = true
 		$Pivot/Camera/SpotLight.light_energy = 20
 		$Pivot/Camera/SpotLight.spot_angle = 6
