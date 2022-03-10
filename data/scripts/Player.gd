@@ -24,7 +24,11 @@ func _process(delta):
 	
 	# animation	
 	if (Input.get_action_strength("right") - Input.get_action_strength("left") != 0):
+		if (Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right")):
+			animation_player.stop() # two prevent blending
+			pass
 		animation_player.play("Walking") # play animation
 		character_sprite.flip_h = Input.is_action_pressed("left") # flip the sprite if going left
 	else:
-		animation_player.stop()
+		print(animation_player.get_default_blend_time())
+		animation_player.play("Idle")
