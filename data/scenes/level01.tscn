@@ -64,6 +64,45 @@ shape = SubResource( 1 )
 [node name="Exit" type="Position3D" parent="Teleport2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0 )
 
+[node name="Teleport3" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.75, 13.335, 0 )
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Teleport3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 1 )
+
+[node name="Exit" type="Position3D" parent="Teleport3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.1172, 0 )
+
+[node name="Teleport4" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6382, 6.69947, 0 )
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Teleport4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 1 )
+
+[node name="Exit" type="Position3D" parent="Teleport4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.48764, 0 )
+
+[node name="Teleport5" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7237, 3.50951, 0 )
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Teleport5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 1 )
+
+[node name="Exit" type="Position3D" parent="Teleport5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.97094, 0 )
+
 [node name="Ground_Plane2" type="MeshInstance" parent="."]
 transform = Transform( 0.497549, 0, 0, 0, 0.292359, 0, 0, 0, 0.497549, -8.68109, 0, -26.3775 )
 mesh = SubResource( 2 )
@@ -72,3 +111,6 @@ material/0 = null
 
 [connection signal="body_entered" from="Teleport" to="Teleport" method="_on_Teleport_body_entered"]
 [connection signal="body_entered" from="Teleport2" to="Teleport2" method="_on_Teleport_body_entered"]
+[connection signal="body_entered" from="Teleport3" to="Teleport3" method="_on_Teleport_body_entered"]
+[connection signal="body_entered" from="Teleport4" to="Teleport4" method="_on_Teleport_body_entered"]
+[connection signal="body_entered" from="Teleport5" to="Teleport5" method="_on_Teleport_body_entered"]
