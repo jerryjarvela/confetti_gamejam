@@ -8,116 +8,157 @@
 
 [node name="Polygons" type="Node2D" parent="Character"]
 __meta__ = {
+"_edit_group_": true,
 "_edit_lock_": true
 }
 
 [node name="Torso" type="Polygon2D" parent="Character/Polygons"]
 position = Vector2( -783, -1575 )
 texture = ExtResource( 1 )
+skeleton = NodePath("../../../Skeleton2D")
 polygon = PoolVector2Array( 659.151, 376.316, 813.757, 327.632, 865.73, 342.105, 899.283, 437.5, 922.309, 550, 944.02, 664.474, 951.257, 713.158, 934.151, 750.658, 945.335, 791.447, 876.257, 823.684, 759.151, 836.184, 721.651, 814.474, 690.73, 840.789, 615.73, 821.711, 556.52, 746.711, 600.599, 617.105, 587.441, 594.737, 587.441, 554.605, 616.388, 512.5, 580.204, 434.211, 654.546, 397.368, 725.982, 490.533, 729.533, 573.965, 724.799, 676.331, 723.615, 768.639, 878.053, 711.834, 773.911, 777.515, 874.503, 765.089 )
 uv = PoolVector2Array( 659.151, 376.316, 813.757, 327.632, 865.73, 342.105, 899.283, 437.5, 922.309, 550, 944.02, 664.474, 951.257, 713.158, 934.151, 750.658, 945.335, 791.447, 876.257, 823.684, 759.151, 836.184, 721.651, 814.474, 690.73, 840.789, 615.73, 821.711, 556.52, 746.711, 600.599, 617.105, 587.441, 594.737, 587.441, 554.605, 616.388, 512.5, 580.204, 434.211, 654.546, 397.368, 725.982, 490.533, 729.533, 573.965, 724.799, 676.331, 723.615, 768.639, 878.053, 711.834, 773.911, 777.515, 874.503, 765.089 )
 polygons = [ PoolIntArray( 10, 26, 24, 11 ), PoolIntArray( 26, 27, 9, 10 ), PoolIntArray( 27, 7, 8, 9 ), PoolIntArray( 7, 25, 6 ), PoolIntArray( 25, 5, 6 ), PoolIntArray( 25, 27, 7 ), PoolIntArray( 23, 5, 4, 22 ), PoolIntArray( 22, 21, 3, 4 ), PoolIntArray( 21, 2, 3 ), PoolIntArray( 21, 1, 2 ), PoolIntArray( 21, 0, 1 ), PoolIntArray( 24, 23, 5, 25, 27, 26 ), PoolIntArray( 15, 22, 16 ), PoolIntArray( 16, 17, 22 ), PoolIntArray( 17, 18, 22 ), PoolIntArray( 18, 21, 22 ), PoolIntArray( 21, 20, 0 ), PoolIntArray( 21, 18, 19, 20 ), PoolIntArray( 23, 22, 15, 14 ), PoolIntArray( 13, 24, 23, 14 ), PoolIntArray( 13, 12, 11, 24 ) ]
+bones = [ "Hip", PoolRealArray( 0, 0, 0, 0, 0, 0.45, 0.45, 1, 1, 1, 1, 1, 1, 1, 0.45, 0, 0, 0, 0, 0, 0, 0, 0, 0.45, 1, 0.45, 1, 1 ), "Hip/LegF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF/KneeF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF/KneeF/AnkleF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB/KneeB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB/KneeB/AnkleB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1", PoolRealArray( 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0 ), "Hip/Spine1/Spine2", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF/ElbowF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF/ElbowF/WristF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB/ElbowB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB/ElbowB/WristB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/Neck", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/Neck/Head", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
 internal_vertex_count = 7
 
 [node name="Head" type="Polygon2D" parent="Character/Polygons"]
 position = Vector2( -781.918, -1461.87 )
 texture = ExtResource( 1 )
+skeleton = NodePath("../../../Skeleton2D")
 polygon = PoolVector2Array( 655.172, 193.364, 675.549, 153.865, 653.918, 96.8119, 700.313, 19.3824, 790.282, -4.12852, 826.019, 9.03761, 872.1, 133.176, 844.514, 202.141, 816.301, 207.157, 821.317, 246.655, 800.627, 279.257, 752.665, 286.467, 724.451, 265.464, 722.257, 204.962, 710.658, 196.812 )
 uv = PoolVector2Array( 655.172, 193.364, 675.549, 153.865, 653.918, 96.8119, 700.313, 19.3824, 790.282, -4.12852, 826.019, 9.03761, 872.1, 133.176, 844.514, 202.141, 816.301, 207.157, 821.317, 246.655, 800.627, 279.257, 752.665, 286.467, 724.451, 265.464, 722.257, 204.962, 710.658, 196.812 )
 polygons = [ PoolIntArray( 13, 8, 9, 12 ), PoolIntArray( 12, 11, 10, 9 ), PoolIntArray( 13, 14, 0, 1, 2, 3, 4, 5, 6, 7, 8 ) ]
+bones = [ "Hip", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF/KneeF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF/KneeF/AnkleF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB/KneeB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB/KneeB/AnkleB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF/ElbowF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF/ElbowF/WristF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB/ElbowB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB/ElbowB/WristB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/Neck", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0 ), "Hip/Spine1/Spine2/Neck/Head", PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1 ) ]
 
 [node name="LegF" type="Polygon2D" parent="Character/Polygons"]
-position = Vector2( -97.8355, -921.105 )
+position = Vector2( -108.836, -932.105 )
 texture = ExtResource( 1 )
+skeleton = NodePath("../../../Skeleton2D")
 polygon = PoolVector2Array( 39.4145, 23.0263, 143.362, 17.1053, 205.862, 93.4211, 195.993, 268.421, 189.414, 390.789, 192.046, 416.447, 176.257, 441.447, 168.362, 534.868, 169.678, 646.053, 173.625, 786.184, 175.599, 808.553, 174.283, 832.237, 267.046, 883.553, 270.993, 926.974, -1.375, 925.658, 0.598694, 892.763, 1.25659, 823.684, -0.717102, 660.526, 2.57233, 538.816, 40.7302, 450, 9.15131, 278.947, -17.1645, 98.6842, 124.941, 430.921, 120.993, 813.816 )
 uv = PoolVector2Array( 39.4145, 23.0263, 143.362, 17.1053, 205.862, 93.4211, 195.993, 268.421, 189.414, 390.789, 192.046, 416.447, 176.257, 441.447, 168.362, 534.868, 169.678, 646.053, 173.625, 786.184, 175.599, 808.553, 174.283, 832.237, 267.046, 883.553, 270.993, 926.974, -1.375, 925.658, 0.598694, 892.763, 1.25659, 823.684, -0.717102, 660.526, 2.57233, 538.816, 43.3618, 470.395, 9.15131, 278.947, -17.1645, 98.6842, 128.23, 414.474, 120.993, 813.816 )
 polygons = [ PoolIntArray( 21, 2, 1, 0 ), PoolIntArray( 20, 3, 2, 21 ), PoolIntArray( 19, 22, 4, 3, 20 ), PoolIntArray( 22, 5, 4 ), PoolIntArray( 22, 6, 5 ), PoolIntArray( 18, 19, 22, 6, 7 ), PoolIntArray( 17, 8, 7, 18 ), PoolIntArray( 17, 16, 23, 9, 8 ), PoolIntArray( 23, 9, 10 ), PoolIntArray( 23, 10, 11 ), PoolIntArray( 15, 11, 23, 16 ), PoolIntArray( 14, 13, 12, 11, 15 ) ]
+bones = [ "Hip", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF", PoolRealArray( 1, 1, 1, 1, 1, 0.6, 0.6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0 ), "Hip/LegF/KneeF", PoolRealArray( 0, 0, 0, 0, 0.6, 0.6, 1, 1, 1, 1, 0.6, 0.6, 0, 0, 0, 0.6, 1, 1, 1, 0.6, 0, 0, 0.6, 0.6 ), "Hip/LegF/KneeF/AnkleF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.6, 0.6, 1, 1, 1, 1, 1, 0.6, 0, 0, 0, 0, 0, 0, 0.6 ), "Hip/LegB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB/KneeB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB/KneeB/AnkleB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF/ElbowF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF/ElbowF/WristF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB/ElbowB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB/ElbowB/WristB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/Neck", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/Neck/Head", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
 internal_vertex_count = 2
 
 [node name="LegB" type="Polygon2D" parent="Character/Polygons"]
-position = Vector2( -407.046, -925.362 )
+position = Vector2( -419.046, -933.362 )
 texture = ExtResource( 1 )
+skeleton = NodePath("../../../Skeleton2D")
 polygon = PoolVector2Array( 329.739, 33.5106, 452.612, 14.3617, 514.846, 89.8936, 504.207, 292.021, 498.356, 392.553, 499.42, 420.745, 483.995, 442.553, 476.016, 537.766, 480.862, 691.447, 480.862, 794.079, 480.862, 809.868, 480.862, 829.605, 575.599, 875.658, 578.23, 923.026, 309.151, 925.658, 305.862, 874.342, 319.678, 821.053, 322.967, 707.237, 312.441, 550, 350.599, 456.579, 326.914, 304.605, 292.046, 102.632, 438.099, 432.895, 423.625, 816.447 )
 uv = PoolVector2Array( 329.739, 33.5106, 452.612, 14.3617, 514.846, 89.8936, 504.207, 292.021, 498.356, 392.553, 499.42, 420.745, 483.995, 442.553, 476.016, 537.766, 480.862, 691.447, 480.862, 794.079, 480.862, 809.868, 480.862, 829.605, 575.599, 875.658, 578.23, 923.026, 309.151, 925.658, 305.862, 874.342, 319.678, 821.053, 322.967, 707.237, 312.441, 550, 355.204, 469.737, 326.914, 304.605, 292.046, 102.632, 440.072, 422.368, 423.625, 816.447 )
 polygons = [ PoolIntArray( 21, 2, 1, 0 ), PoolIntArray( 21, 20, 3, 2 ), PoolIntArray( 20, 3, 4, 22, 19 ), PoolIntArray( 22, 5, 4 ), PoolIntArray( 22, 6, 5 ), PoolIntArray( 18, 7, 6, 22, 19 ), PoolIntArray( 17, 8, 7, 18 ), PoolIntArray( 17, 16, 23, 9, 8 ), PoolIntArray( 23, 10, 9 ), PoolIntArray( 23, 11, 10 ), PoolIntArray( 15, 11, 23, 16 ), PoolIntArray( 14, 13, 12, 11, 15 ) ]
+bones = [ "Hip", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF/KneeF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF/KneeF/AnkleF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB", PoolRealArray( 1, 1, 1, 1, 1, 0.58, 0.58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.58, 1, 1, 0.58, 0 ), "Hip/LegB/KneeB", PoolRealArray( 0, 0, 0, 0, 0.58, 0.58, 1, 1, 1, 1, 0.58, 0.58, 0, 0, 0.42, 0.42, 1, 1, 1, 0.58, 0, 0, 0.58, 0.58 ), "Hip/LegB/KneeB/AnkleB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.58, 0.58, 1, 1, 1, 1, 1, 0.42, 0, 0, 0, 0, 0, 0, 0.58 ), "Hip/Spine1", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF/ElbowF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF/ElbowF/WristF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB/ElbowB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB/ElbowB/WristB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/Neck", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/Neck/Head", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
 internal_vertex_count = 2
 
 [node name="ArmF" type="Polygon2D" parent="Character/Polygons"]
-position = Vector2( -1072.47, -1457.92 )
+position = Vector2( -1088.47, -1447.92 )
 texture = ExtResource( 1 )
+skeleton = NodePath("../../../Skeleton2D")
 polygon = PoolVector2Array( 989.474, 271.711, 1023.68, 236.842, 1080.92, 230.921, 1113.82, 266.447, 1117.11, 411.842, 1107.24, 524.342, 1097.37, 555.921, 1106.58, 586.842, 1114.47, 757.895, 1105.92, 789.474, 1108.55, 820.395, 1143.42, 871.053, 1142.76, 915.132, 1107.24, 942.105, 1057.24, 943.421, 1024.34, 918.421, 1021.71, 882.237, 1037.5, 836.184, 1034.87, 807.237, 1013.82, 769.737, 996.711, 575, 990.789, 426.974, 1046.71, 567.763, 1069.74, 800.658 )
 uv = PoolVector2Array( 989.474, 271.711, 1023.68, 236.842, 1080.92, 230.921, 1113.82, 266.447, 1117.11, 411.842, 1107.24, 524.342, 1097.37, 555.921, 1106.58, 586.842, 1114.47, 757.895, 1105.92, 789.474, 1108.55, 820.395, 1143.42, 871.053, 1142.76, 915.132, 1107.24, 942.105, 1057.24, 943.421, 1024.34, 918.421, 1021.71, 882.237, 1037.5, 836.184, 1034.21, 805.263, 1015.13, 769.737, 1001.32, 607.237, 991.447, 409.211, 1046.71, 567.763, 1069.74, 800.658 )
 polygons = [ PoolIntArray( 0, 3, 2, 1 ), PoolIntArray( 0, 21, 4, 3 ), PoolIntArray( 20, 22, 5, 4, 21 ), PoolIntArray( 22, 6, 5 ), PoolIntArray( 22, 7, 6 ), PoolIntArray( 7, 8, 19, 20, 22 ), PoolIntArray( 8, 23, 19 ), PoolIntArray( 8, 9, 23 ), PoolIntArray( 10, 23, 9 ), PoolIntArray( 17, 23, 18 ), PoolIntArray( 23, 19, 18 ), PoolIntArray( 10, 17, 23 ), PoolIntArray( 10, 11, 12, 13, 14, 15, 16, 17 ) ]
+bones = [ "Hip", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF/KneeF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF/KneeF/AnkleF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB/KneeB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB/KneeB/AnkleB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF", PoolRealArray( 1, 1, 1, 1, 1, 1, 0.59, 0.59, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.59, 1, 0.59, 0 ), "Hip/Spine1/Spine2/ArmF/ElbowF", PoolRealArray( 0, 0, 0, 0, 0, 0.59, 0.59, 1, 1, 0.59, 0.18, 0, 0, 0, 0, 0, 0, 0.18, 0.59, 1, 0.14, 0, 0.59, 0.0600001 ), "Hip/Spine1/Spine2/ArmF/ElbowF/WristF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0.18, 0.59, 1, 1, 1, 1, 1, 1, 1, 1, 0.59, 0.18, 0, 0, 0, 0.0600001 ), "Hip/Spine1/Spine2/ArmB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB/ElbowB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB/ElbowB/WristB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/Neck", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/Neck/Head", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
 internal_vertex_count = 2
 
 [node name="ArmB" type="Polygon2D" parent="Character/Polygons"]
-position = Vector2( -1247.08, -1460.29 )
+position = Vector2( -1263.08, -1449.29 )
 texture = ExtResource( 1 )
+skeleton = NodePath("../../../Skeleton2D")
 polygon = PoolVector2Array( 1169.08, 267.105, 1193.42, 240.132, 1257.24, 228.289, 1290.79, 266.447, 1293.42, 502.632, 1278.95, 544.737, 1284.21, 578.289, 1291.45, 764.474, 1280.92, 786.842, 1284.21, 820.395, 1323.03, 869.079, 1321.05, 913.816, 1300.66, 944.079, 1209.87, 946.053, 1198.03, 925.658, 1195.39, 893.421, 1208.55, 830.263, 1207.24, 801.316, 1190.13, 773.684, 1173.03, 567.105, 1230.92, 549.342, 1243.42, 798.684 )
 uv = PoolVector2Array( 1169.08, 267.105, 1193.42, 240.132, 1257.24, 228.289, 1290.79, 266.447, 1293.42, 502.632, 1278.95, 544.737, 1284.21, 578.289, 1291.45, 764.474, 1280.92, 786.842, 1284.21, 820.395, 1323.03, 869.079, 1321.05, 913.816, 1300.66, 944.079, 1209.87, 946.053, 1198.03, 925.658, 1195.39, 893.421, 1208.55, 830.263, 1207.24, 801.316, 1190.13, 773.684, 1173.03, 567.105, 1230.92, 549.342, 1243.42, 798.684 )
 polygons = [ PoolIntArray( 0, 3, 2, 1 ), PoolIntArray( 19, 20, 4, 3, 0 ), PoolIntArray( 20, 5, 4 ), PoolIntArray( 20, 6, 5 ), PoolIntArray( 19, 18, 7, 6, 20 ), PoolIntArray( 18, 21, 7 ), PoolIntArray( 17, 21, 18 ), PoolIntArray( 16, 21, 17 ), PoolIntArray( 21, 9, 8 ), PoolIntArray( 21, 7, 8 ), PoolIntArray( 16, 9, 21 ), PoolIntArray( 16, 15, 14, 13, 12, 11, 10, 9 ) ]
+bones = [ "Hip", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF/KneeF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegF/KneeF/AnkleF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB/KneeB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/LegB/KneeB/AnkleB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF/ElbowF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmF/ElbowF/WristF", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/ArmB", PoolRealArray( 1, 1, 1, 1, 1, 0.55, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.55, 0 ), "Hip/Spine1/Spine2/ArmB/ElbowB", PoolRealArray( 0, 0, 0, 0, 0.1, 0.55, 1, 1, 0.55, 0.1, 0, 0, 0, 0, 0, 0, 0.1, 0.55, 1, 0.1, 0.55, 0.55 ), "Hip/Spine1/Spine2/ArmB/ElbowB/WristB", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0.1, 0.55, 1, 1, 1, 1, 1, 1, 1, 1, 0.55, 0.1, 0, 0, 0.55 ), "Hip/Spine1/Spine2/Neck", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "Hip/Spine1/Spine2/Neck/Head", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
 internal_vertex_count = 2
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
 
 [node name="Hip" type="Bone2D" parent="Skeleton2D"]
 position = Vector2( -4, -800 )
+rest = Transform2D( 1, 0, 0, 1, -4, -800 )
 default_length = 70.0
 
 [node name="LegF" type="Bone2D" parent="Skeleton2D/Hip"]
-position = Vector2( -6.83551, -44.1053 )
+position = Vector2( -17.8355, -55.1056 )
+rotation = -0.552719
+rest = Transform2D( 1, 0, 0, 1, -17.8355, -55.1056 )
 
 [node name="KneeF" type="Bone2D" parent="Skeleton2D/Hip/LegF"]
 position = Vector2( 25, 360 )
+rotation = 0.446562
+rest = Transform2D( 1, 0, 0, 1, 25, 360 )
 
 [node name="AnkleF" type="Bone2D" parent="Skeleton2D/Hip/LegF/KneeF"]
 position = Vector2( -32, 424 )
 rotation = 0.214856
+rest = Transform2D( 0.977007, 0.213207, -0.213207, 0.977007, -32, 424 )
 default_length = 100.0
 
 [node name="LegB" type="Bone2D" parent="Skeleton2D/Hip"]
-position = Vector2( -7.04602, -46.3617 )
+position = Vector2( -19.046, -54.3613 )
+rotation = 0.739746
+rest = Transform2D( 1, 0, 0, 1, -19.046, -54.3613 )
 
 [node name="KneeB" type="Bone2D" parent="Skeleton2D/Hip/LegB"]
 position = Vector2( 25, 360 )
+rotation = 0.888266
+rest = Transform2D( 1, 0, 0, 1, 25, 360 )
 
 [node name="AnkleB" type="Bone2D" parent="Skeleton2D/Hip/LegB/KneeB"]
 position = Vector2( -32, 424 )
 rotation = 0.214856
+rest = Transform2D( 0.977007, 0.213207, -0.213207, 0.977007, -32, 424 )
 default_length = 100.0
 
 [node name="Spine1" type="Bone2D" parent="Skeleton2D/Hip"]
 position = Vector2( -11, -130 )
+rotation = 0.38481
+rest = Transform2D( 1, 0, 0, 1, -11, -130 )
 
 [node name="Spine2" type="Bone2D" parent="Skeleton2D/Hip/Spine1"]
 position = Vector2( -10, -140 )
+rest = Transform2D( 1, 0, 0, 1, -10, -140 )
 
 [node name="ArmF" type="Bone2D" parent="Skeleton2D/Hip/Spine1/Spine2"]
-position = Vector2( 2.52631, -110.921 )
+position = Vector2( -13.4777, -100.922 )
+rotation = 1.21014
+rest = Transform2D( 1, 0, 0, 1, -13.4777, -100.922 )
 
 [node name="ElbowF" type="Bone2D" parent="Skeleton2D/Hip/Spine1/Spine2/ArmF"]
 position = Vector2( -3, 274 )
+rotation = -0.840591
+rest = Transform2D( 1, 0, 0, 1, -3, 274 )
 
 [node name="WristF" type="Bone2D" parent="Skeleton2D/Hip/Spine1/Spine2/ArmF/ElbowF"]
 position = Vector2( 31, 292 )
 rotation = 1.32021
+scale = Vector2( 1, 1 )
+rest = Transform2D( 0.247972, 0.968767, -0.968767, 0.247972, 31, 292 )
 default_length = 70.0
 
 [node name="ArmB" type="Bone2D" parent="Skeleton2D/Hip/Spine1/Spine2"]
-position = Vector2( 2.92102, -113.289 )
+position = Vector2( -13.079, -102.288 )
+rotation = -0.735937
+rest = Transform2D( 1, 0, 0, 1, -13.079, -102.288 )
 
 [node name="ElbowB" type="Bone2D" parent="Skeleton2D/Hip/Spine1/Spine2/ArmB"]
 position = Vector2( -3, 274 )
+rotation = -0.879377
+rest = Transform2D( 1, 0, 0, 1, -3, 274 )
 
 [node name="WristB" type="Bone2D" parent="Skeleton2D/Hip/Spine1/Spine2/ArmB/ElbowB"]
 position = Vector2( 31, 292 )
 rotation = 1.33112
+rest = Transform2D( 0.237388, 0.971415, -0.971415, 0.237388, 31, 292 )
 default_length = 70.0
 
 [node name="Neck" type="Bone2D" parent="Skeleton2D/Hip/Spine1/Spine2"]
 position = Vector2( -6, -122 )
-rotation = -1.61868
+rotation = -1.21708
+rest = Transform2D( -0.0478654, -0.998854, 0.998854, -0.0478654, -6, -122 )
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Hip/Spine1/Spine2/Neck"]
 position = Vector2( 61.0261, 2.49506 )
+rotation = -0.369975
+rest = Transform2D( 1, 0, 0, 1, 61.0261, 2.49506 )
 default_length = 100.0
