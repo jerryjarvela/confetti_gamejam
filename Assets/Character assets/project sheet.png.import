@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/project sheet.png-a90f5efc09d3bef060f1162273114dc4.stex"
+path="res://.import/project sheet.png-eaf8c50d5b6cdc997cadcf39e7623539.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://project sheet.png"
-dest_files=[ "res://.import/project sheet.png-a90f5efc09d3bef060f1162273114dc4.stex" ]
+source_file="res://Assets/Character assets/project sheet.png"
+dest_files=[ "res://.import/project sheet.png-eaf8c50d5b6cdc997cadcf39e7623539.stex" ]
 
 [params]
 
