@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Apartment_Upper.dae-95f6a92adca9fa0db06efdf94daaf697.scn"
+path="res://.import/Upper_Apartment.dae-7099ceec1b472282e7b95ee16a027115.scn"
 
 [deps]
 
-source_file="res://Assets/Apartment_Upper.dae"
-dest_files=[ "res://.import/Apartment_Upper.dae-95f6a92adca9fa0db06efdf94daaf697.scn" ]
+source_file="res://Assets/Upper_Apartment.dae"
+dest_files=[ "res://.import/Upper_Apartment.dae-7099ceec1b472282e7b95ee16a027115.scn" ]
 
 [params]
 
