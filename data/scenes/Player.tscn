@@ -27,7 +27,8 @@ projection = 1
 size = 20.0
 
 [node name="SpotLight" type="SpotLight" parent="Pivot/Camera"]
-transform = Transform( 1, 2.32831e-09, 3.72529e-08, -2.79397e-09, 1, -4.47035e-08, -4.47035e-08, 5.96046e-08, 1, -1.07395, -0.176229, 30.5426 )
+transform = Transform( 1, 2.79397e-09, 4.47035e-08, -2.79397e-09, 1, -5.96046e-08, -4.47035e-08, 5.96046e-08, 1, -1.07395, -0.176229, 30.5426 )
+light_energy = 10.0
 light_cull_mask = 4294967293
 spot_range = 72.5593
 spot_attenuation = 1e-05
