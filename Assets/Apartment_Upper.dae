@@ -6,9 +6,9 @@
       <authoring_tool>FBX COLLADA exporter</authoring_tool>
       <comments/>
     </contributor>
-    <created>2022-03-10T15:09:41Z</created>
+    <created>2022-03-10T12:38:42Z</created>
     <keywords/>
-    <modified>2022-03-10T15:09:41Z</modified>
+    <modified>2022-03-10T12:38:42Z</modified>
     <revision/>
     <subject/>
     <title/>
@@ -16,12 +16,12 @@
     <up_axis>Y_UP</up_axis>
   </asset>
   <library_materials>
-    <material id="aiStandardSurface1" name="aiStandardSurface1">
-      <instance_effect url="#aiStandardSurface1-fx"/>
+    <material id="blinn1" name="blinn1">
+      <instance_effect url="#blinn1-fx"/>
     </material>
   </library_materials>
   <library_effects>
-    <effect id="aiStandardSurface1-fx" name="aiStandardSurface1">
+    <effect id="blinn1-fx" name="blinn1">
       <profile_COMMON>
         <technique sid="standard">
           <phong>
@@ -32,11 +32,26 @@
               <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
             </ambient>
             <diffuse>
-              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+              <color sid="diffuse">0.400000  0.400000 0.400000 1.000000</color>
             </diffuse>
             <specular>
-              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+              <color sid="specular">0.500000  0.500000 0.500000 1.000000</color>
             </specular>
+            <shininess>
+              <float sid="shininess">6.311791</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">0.500000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">1.000000</float>
+            </transparency>
           </phong>
         </technique>
       </profile_COMMON>
@@ -4205,7 +4220,7 @@
         <vertices id="Upper_Apartment-VERTEX">
           <input semantic="POSITION" source="#Upper_Apartment-POSITION"/>
         </vertices>
-        <triangles count="1000" material="aiStandardSurface1">
+        <triangles count="1000" material="blinn1">
           <input semantic="VERTEX" offset="0" source="#Upper_Apartment-VERTEX"/>
           <input semantic="NORMAL" offset="1" source="#Upper_Apartment-Normal0"/>
           <input semantic="TEXCOORD" offset="2" set="0" source="#Upper_Apartment-UV0"/>
@@ -4215,13 +4230,13 @@
     </geometry>
   </library_geometries>
   <library_visual_scenes>
-    <visual_scene id="Upper_Apartment" name="Upper_Apartment">
+    <visual_scene id="Apartment_Upper" name="Apartment_Upper">
       <node name="Upper_Apartment" id="Upper_Apartment" sid="Upper_Apartment">
-        <matrix sid="matrix">0.010000 0.000000 0.000000 -0.000000 0.000000 0.010000 0.000000 9.750000 0.000000 0.000000 0.010000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+        <matrix sid="matrix">0.010000 0.000000 0.000000 -0.000000 0.000000 0.010000 0.000000 0.000000 0.000000 0.000000 0.010000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
         <instance_geometry url="#Upper_Apartment-lib">
           <bind_material>
             <technique_common>
-              <instance_material symbol="aiStandardSurface1" target="#aiStandardSurface1"/>
+              <instance_material symbol="blinn1" target="#blinn1"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
@@ -4243,6 +4258,6 @@
     </visual_scene>
   </library_visual_scenes>
   <scene>
-    <instance_visual_scene url="#Upper_Apartment"/>
+    <instance_visual_scene url="#Apartment_Upper"/>
   </scene>
 </COLLADA>

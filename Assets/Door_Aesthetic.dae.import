@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Bedroom.dae-0b118e263f4daa6b4cd7a3dba2463d1c.scn"
+path="res://.import/Door_Aesthetic.dae-732f4a7c2d69dd9509f201053e007789.scn"
 
 [deps]
 
-source_file="res://Assets/Bedroom.dae"
-dest_files=[ "res://.import/Bedroom.dae-0b118e263f4daa6b4cd7a3dba2463d1c.scn" ]
+source_file="res://Assets/Door_Aesthetic.dae"
+dest_files=[ "res://.import/Door_Aesthetic.dae-732f4a7c2d69dd9509f201053e007789.scn" ]
 
 [params]
 
