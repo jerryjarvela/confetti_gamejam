@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://data/scenes/Character_viewport.tscn" type="PackedScene" id=1]
 [ext_resource path="res://data/textures/gradient.png" type="Texture" id=2]
 [ext_resource path="res://data/scenes/Flashlight.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/TEST FLAG.png" type="Texture" id=4]
 [ext_resource path="res://data/scripts/Player.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Audio/Footsteps/footsteps_run.ogg" type="AudioStream" id=6]
 
 [sub_resource type="ViewportTexture" id=5]
 viewport_path = NodePath("Viewport")
@@ -20,6 +21,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.789563, 0.0496341, 9.53674e
 collision_layer = 32769
 collision_mask = 32769
 script = ExtResource( 5 )
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.158055, 0 )
+stream = ExtResource( 6 )
 
 [node name="Pivot" type="Spatial" parent="."]
 

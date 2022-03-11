@@ -35,6 +35,7 @@ func _process(delta):
 	var direction: Vector3 = Vector3.ZERO;
 	velocity.x = walk_speed * (Input.get_action_strength("right") - Input.get_action_strength("left"))
 	
+	
 	# jumping
 	if (is_on_floor()):
 		# is_on_floor() is not reliable, so can't use is_action_just_pressed() here
@@ -48,12 +49,13 @@ func _process(delta):
 	if (Input.get_action_strength("right") - Input.get_action_strength("left") != 0):
 		if (Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right")):
 			animation_player.stop() # to prevent animation blending, or whatever is causing the animations to be too slow
-			pass
+			$Footsteps.play() # sound
 		animation_player.play("Walking") # play animation
 		character_sprite.flip_h = Input.is_action_pressed("left") # flip the sprite if going left
 		$Whiteflag.flip_h = Input.is_action_pressed("right") # ...and flag
 	else:
 		animation_player.play("Idle")
+		$Footsteps.stop() # sound
 		
 	# light/flag
 	if Input.is_action_just_pressed("light"):

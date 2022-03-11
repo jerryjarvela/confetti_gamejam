@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/footsteps_sneak.ogg-23d220e221ac89c154e989f876a80f6a.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Footsteps/footsteps_sneak.ogg"
+dest_files=[ "res://.import/footsteps_sneak.ogg-23d220e221ac89c154e989f876a80f6a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
