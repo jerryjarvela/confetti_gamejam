@@ -112,13 +112,13 @@ shape = SubResource( 11 )
 
 [node name="RMB" type="Sprite3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53122, 14.6484, -1.14808 )
-pixel_size = 0.005
+pixel_size = 0.003
 shaded = true
 texture = ExtResource( 12 )
 
 [node name="LMB" type="Sprite3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111257, 17.1787, -0.629342 )
-pixel_size = 0.005
+pixel_size = 0.003
 shaded = true
 texture = ExtResource( 11 )
 
@@ -281,6 +281,19 @@ script = ExtResource( 10 )
 [node name="CollisionShape" type="CollisionShape" parent="End"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53948, 0 )
 shape = SubResource( 4 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( -0.6726, 0.0094269, 0.739947, 0.12961, 0.985963, 0.105253, -0.728568, 0.166698, -0.66438, -13.3745, 0.771678, -2.48035 )
+shadow_enabled = true
+spot_range = 6.11443
+spot_angle = 21.6395
+
+[node name="SpotLight2" type="SpotLight" parent="."]
+transform = Transform( 0.861839, -0.186856, -0.471507, 0.0938888, 0.97237, -0.213733, 0.498416, 0.139934, 0.85557, -16.5991, 0.426366, 2.0565 )
+light_energy = 0.165
+shadow_enabled = true
+spot_range = 6.11443
+spot_angle = 22.2874
 
 [connection signal="body_entered" from="Teleport" to="Teleport" method="_on_Teleport_body_entered"]
 [connection signal="body_entered" from="Teleport" to="LightPickup" method="_on_Teleport_body_entered"]
