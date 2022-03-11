@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Confetti Gamejam"
+config/name="Destination Peace"
 run/main_scene="res://data/scenes/cameratest.tscn"
 config/icon="res://icon.png"
 
