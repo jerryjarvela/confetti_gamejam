@@ -15,8 +15,15 @@ _global_script_class_icons={
 [application]
 
 config/name="Destination Peace"
-run/main_scene="res://data/scenes/cameratest.tscn"
+run/main_scene="res://data/scenes/level01.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/borderless=true
+window/size/always_on_top=true
 
 [input]
 
@@ -58,4 +65,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/filters/msaa=3
 environment/default_environment="res://default_env.tres"
