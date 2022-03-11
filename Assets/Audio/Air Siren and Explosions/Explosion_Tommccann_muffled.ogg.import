@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Explosion_Tommccann_muffled.ogg-5dd23b24ef457663a94b266454aeb622.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Air Siren and Explosions/Explosion_Tommccann_muffled.ogg"
+dest_files=[ "res://.import/Explosion_Tommccann_muffled.ogg-5dd23b24ef457663a94b266454aeb622.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

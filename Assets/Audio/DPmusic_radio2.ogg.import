@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DPmusic_radio2.ogg-50b11a9e235e4decdaf96ca1f051b557.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/DPmusic_radio2.ogg"
+dest_files=[ "res://.import/DPmusic_radio2.ogg-50b11a9e235e4decdaf96ca1f051b557.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

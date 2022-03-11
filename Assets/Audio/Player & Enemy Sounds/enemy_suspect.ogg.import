@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/enemy_suspect.ogg-1fe140d068f842e205faa3b3987a1ba1.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Player & Enemy Sounds/enemy_suspect.ogg"
+dest_files=[ "res://.import/enemy_suspect.ogg-1fe140d068f842e205faa3b3987a1ba1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

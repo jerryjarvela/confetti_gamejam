@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DPmusic_cityambience.ogg-486c3f6ccb2d51591515c2fd44147771.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/DPmusic_cityambience.ogg"
+dest_files=[ "res://.import/DPmusic_cityambience.ogg-486c3f6ccb2d51591515c2fd44147771.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -78,7 +78,7 @@ modulate = Color( 1, 0, 0, 1 )
 texture = ExtResource( 4 )
 
 [node name="Whiteflag" type="Sprite3D" parent="."]
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, 0, 2.2, -0.199 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, 0, 2.2, 0 )
 visible = false
 flip_h = true
 pixel_size = 0.012

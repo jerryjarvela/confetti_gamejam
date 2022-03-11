@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/enemy_bribed.ogg-30d3c450c190b408472aa0023b397402.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Player & Enemy Sounds/enemy_bribed.ogg"
+dest_files=[ "res://.import/enemy_bribed.ogg-30d3c450c190b408472aa0023b397402.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
