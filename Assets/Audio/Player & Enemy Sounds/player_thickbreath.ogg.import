@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/player_thickbreath.ogg-f23aaee32308d26f38e4712c527aaffe.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Player & Enemy Sounds/player_thickbreath.ogg"
+dest_files=[ "res://.import/player_thickbreath.ogg-f23aaee32308d26f38e4712c527aaffe.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

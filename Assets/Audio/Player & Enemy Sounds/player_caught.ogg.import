@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/player_caught.ogg-d28c0d2c6406400d32d0ca79bad04f10.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Player & Enemy Sounds/player_caught.ogg"
+dest_files=[ "res://.import/player_caught.ogg-d28c0d2c6406400d32d0ca79bad04f10.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

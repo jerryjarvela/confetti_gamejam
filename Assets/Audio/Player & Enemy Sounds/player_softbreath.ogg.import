@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/player_softbreath.ogg-311fd8b782295fdd1598278997aa6d04.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Player & Enemy Sounds/player_softbreath.ogg"
+dest_files=[ "res://.import/player_softbreath.ogg-311fd8b782295fdd1598278997aa6d04.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
