@@ -26,16 +26,15 @@ script = ExtResource( 5 )
 [node name="Camera" type="Camera" parent="Pivot"]
 transform = Transform( 0.996195, 0.00759612, -0.086824, 0, 0.996195, 0.0871557, 0.0871557, -0.0868241, 0.992404, 0.841285, 1.56498, 3.71013 )
 projection = 1
-size = 20.0
+size = 7.5
 
 [node name="SpotLight" type="SpotLight" parent="Pivot/Camera"]
-transform = Transform( 1, 2.79397e-09, 4.47035e-08, -2.79397e-09, 1, -5.96046e-08, -4.47035e-08, 5.96046e-08, 1, -1.07395, -0.176229, 30.5426 )
-light_energy = 10.0
+transform = Transform( 0.999998, 7.29042e-05, 0.00218044, 0, 0.999442, -0.0334168, -0.00218166, 0.0334168, 0.999439, -1.16, -1.084, 30.543 )
+light_energy = 2.0
 light_cull_mask = 4294967293
-spot_range = 72.5593
-spot_attenuation = 1e-05
-spot_angle = 2.98777
-spot_angle_attenuation = 0.025383
+spot_range = 70.0
+spot_angle = 4.0
+spot_angle_attenuation = 0.0333
 
 [node name="Character" type="Sprite3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.915, 0 )

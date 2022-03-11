@@ -1,8 +1,8 @@
 extends KinematicBody
 
-var walk_speed: float = 10
-var gravity: float = 1
-var jump_velocity: float = 25
+export var walk_speed: float
+export var gravity: float
+export var jump_velocity: float
 var velocity: Vector3
 export var has_flag: bool
 export var has_light: bool
@@ -60,11 +60,15 @@ func _process(delta):
 		if has_light:
 			$Whiteflag.visible = false
 			$Flashlight.visible = !$Flashlight.visible
+			if $Whiteflag.visible : $Pivot/Camera/SpotLight.spot_angle = 6
+			else : $Pivot/Camera/SpotLight.spot_angle = 4
 		
 	if Input.is_action_just_pressed("flag"):
 		if has_flag:
 			$Whiteflag.visible = !$Whiteflag.visible
 			$Flashlight.visible = false
+			if $Whiteflag.visible : $Pivot/Camera/SpotLight.spot_angle = 6
+			else : $Pivot/Camera/SpotLight.spot_angle = 4
 
 func _on_FlagArea_area_entered(area):
 	if flag != true:
@@ -94,3 +98,7 @@ func Disable_Flag():
 	#$Pivot/Camera/SpotLight.spot_angle = 2.99
 	#$Flashlight.visible = true
 	$Whiteflag.visible = false
+
+
+func _on_Teleport2_body_entered(body):
+	$Pivot/Camera.size = 15
