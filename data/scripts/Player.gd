@@ -4,24 +4,25 @@ var walk_speed: float = 10
 var gravity: float = 1
 var jump_velocity: float = 25
 var velocity: Vector3
+var has_flag = true
+var has_light = true
+#onready var flag = $Whiteflag.visible
+#onready var light = $Flashlight.visible
 onready var character_sprite: Spatial = $Character
 onready var animation_player: AnimationPlayer = $Viewport/Character/AnimationPlayer
-onready var FLAG = false
+var flag = false
 #the flag-true var
 
 func _ready():
-	$Sprite3D.visible = false
-	$Sprite3D2.visible = false
+	$Redflag.visible = false
+	$Whiteflag.visible = false
 	move_lock_z = true
 	animation_player.stop()
 
-
 func _physics_process(delta):
-	Use_Flag()
-	Disable_Flag()
-	
-
-
+	pass
+	#Use_Flag()
+	#Disable_Flag()
 
 func _process(delta):
 	# controls for quitting and restarting the game
@@ -32,17 +33,17 @@ func _process(delta):
 		var err = get_tree().reload_current_scene()
 		if err: print("Scene reload error: " + err)
 	
-	
-	
-	
+	# walking controls
 	var direction: Vector3 = Vector3.ZERO;
 	velocity.x = walk_speed * (Input.get_action_strength("right") - Input.get_action_strength("left"))
-	if Input.is_action_just_pressed("jump") : velocity.y = jump_velocity
+	
+	# jumping
 	if (is_on_floor()):
-		print("on floor")
-	else:
+		# is_on_floor() is not reliable, so can't use is_action_just_pressed() here
+		if Input.is_action_pressed("jump") : velocity.y = jump_velocity
+	else: #gravity
 		velocity.y -= gravity
-	velocity = move_and_slide(velocity)
+	velocity = move_and_slide(velocity, Vector3.UP)
 	velocity.z = 0
 	
 	# animation	
@@ -52,47 +53,46 @@ func _process(delta):
 			pass
 		animation_player.play("Walking") # play animation
 		character_sprite.flip_h = Input.is_action_pressed("left") # flip the sprite if going left
+		$Whiteflag.flip_h = Input.is_action_pressed("right") # ...and flag
 	else:
-		#print(animation_player.get_default_blend_time())
 		animation_player.play("Idle")
-
+		
+	# light/flag
+	if Input.is_action_just_pressed("light"):
+		if has_light:
+			$Whiteflag.visible = false
+			$Flashlight.visible = !$Flashlight.visible
+		
+	if Input.is_action_just_pressed("flag"):
+		if has_flag:
+			$Whiteflag.visible = !$Whiteflag.visible
+			$Flashlight.visible = false
 
 func _on_FlagArea_area_entered(area):
-	if FLAG != true:
+	if flag != true:
 		if area.is_in_group("Enemy"):
 			#print(FLAG)
-			$Sprite3D.visible = true
+			$Redflag.visible = true
 			#print("GET.WRECKED.")
 			#$Detection_Timer.start()
-		
-
-
 
 func _on_Detection_Timer_timeout():
-	$Sprite3D.visible = true #YOU SHOULD BE DEAD NOW.
-	
+	$Redflag.visible = true #YOU SHOULD BE DEAD NOW.
 
 func _on_FlagArea_area_exited(area):
-		#print("safe")
-		$Sprite3D.visible = false
-
-
+	#print("safe")
+	$Redflag.visible = false
 
 func Use_Flag():
-	if Input.is_action_pressed("Click"):
-		#print(FLAG)
-		var FLAG = true
-		$Pivot/Camera/SpotLight.light_energy = 20
-		$Pivot/Camera/SpotLight.spot_angle = 6
-		$Flashlight.visible = false
-		$Sprite3D2.visible = true
-		
-
+	#var FLAG = true
+	#$Pivot/Camera/SpotLight.light_energy = 20
+	#$Pivot/Camera/SpotLight.spot_angle = 6
+	#$Redflag.visible = false
+	$Whiteflag.visible = true
 
 func Disable_Flag():
-	if Input.is_action_just_released("Click"):
-		var FLAG = false
-		$Pivot/Camera/SpotLight.light_energy = 10
-		$Pivot/Camera/SpotLight.spot_angle = 2.99
-		$Flashlight.visible = true
-		$Sprite3D2.visible = false
+	#var FLAG = false
+	#$Pivot/Camera/SpotLight.light_energy = 10
+	#$Pivot/Camera/SpotLight.spot_angle = 2.99
+	#$Flashlight.visible = true
+	$Whiteflag.visible = false

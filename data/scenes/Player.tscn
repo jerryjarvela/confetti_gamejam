@@ -52,6 +52,7 @@ shaded = true
 texture = ExtResource( 2 )
 
 [node name="Flashlight" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0 )
 
 [node name="Viewport" parent="." instance=ExtResource( 1 )]
 
@@ -69,15 +70,18 @@ collision_mask = 8
 transform = Transform( 1, 0, 0, 0, -0.00342099, 0.999994, 0, -0.999994, -0.00342099, 0, 1.04242, 0 )
 shape = SubResource( 4 )
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="Redflag" type="Sprite3D" parent="."]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, -0.198827, 2.35574, -0.310596 )
 visible = false
+flip_h = true
 modulate = Color( 1, 0, 0, 1 )
 texture = ExtResource( 4 )
 
-[node name="Sprite3D2" type="Sprite3D" parent="."]
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, -0.198827, 2.35574, -0.310596 )
+[node name="Whiteflag" type="Sprite3D" parent="."]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, 0, 2.2, -0.199 )
 visible = false
+flip_h = true
+pixel_size = 0.012
 texture = ExtResource( 4 )
 
 [connection signal="timeout" from="Detection_Timer" to="." method="_on_Detection_Timer_timeout"]
