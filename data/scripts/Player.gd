@@ -4,10 +4,8 @@ var walk_speed: float = 10
 var gravity: float = 1
 var jump_velocity: float = 25
 var velocity: Vector3
-var has_flag = true
-var has_light = true
-#onready var flag = $Whiteflag.visible
-#onready var light = $Flashlight.visible
+export var has_flag: bool
+export var has_light: bool
 onready var character_sprite: Spatial = $Character
 onready var animation_player: AnimationPlayer = $Viewport/Character/AnimationPlayer
 var flag = false

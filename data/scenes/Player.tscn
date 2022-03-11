@@ -53,6 +53,7 @@ texture = ExtResource( 2 )
 
 [node name="Flashlight" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0 )
+visible = false
 
 [node name="Viewport" parent="." instance=ExtResource( 1 )]
 

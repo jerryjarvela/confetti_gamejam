@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://data/scenes/Building2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://data/scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,8 +6,10 @@
 [ext_resource path="res://data/scripts/Teleport.gd" type="Script" id=4]
 [ext_resource path="res://data/scenes/Building3.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/aiStandardSurface1.material" type="Material" id=6]
-
-[sub_resource type="BoxShape" id=1]
+[ext_resource path="res://data/scripts/LightPickup.gd" type="Script" id=7]
+[ext_resource path="res://Assets/TEST FLAG.png" type="Texture" id=8]
+[ext_resource path="res://data/scripts/FlagPickup.gd" type="Script" id=9]
+[ext_resource path="res://data/scripts/End.gd" type="Script" id=10]
 
 [sub_resource type="ArrayMesh" id=2]
 resource_name = "Ground_PlaneMesh"
@@ -25,6 +27,35 @@ surfaces/0 = {
 "vertex_count": 330
 }
 
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 1.54337, 0.147226, 1 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 269.316, 0.147226, 19.2763 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.201874, 0.842834, 1 )
+
+[sub_resource type="CylinderMesh" id=5]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.2
+radial_segments = 12
+
+[sub_resource type="CylinderMesh" id=6]
+top_radius = 0.075
+bottom_radius = 0.05
+height = 0.1
+radial_segments = 12
+
+[sub_resource type="CylinderMesh" id=3]
+top_radius = 0.075
+bottom_radius = 0.075
+height = 0.05
+radial_segments = 12
+
 [node name="Spatial" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
@@ -37,6 +68,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 6.5, 0 )
 
 [node name="Building3" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0 )
+
+[node name="Ground" type="MeshInstance" parent="."]
+transform = Transform( 0.497549, 0, 0, 0, 0.292359, 0, 0, 0, 0.497549, -8.68109, 0, -26.3775 )
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = null
 
 [node name="Teleport" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 10.2626, 0 )
@@ -55,6 +92,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 13.3347, 0 )
 collision_layer = 32768
 collision_mask = 32768
+monitoring = false
 script = ExtResource( 4 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Teleport2"]
@@ -103,14 +141,100 @@ shape = SubResource( 1 )
 [node name="Exit" type="Position3D" parent="Teleport5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.97094, 0 )
 
-[node name="Ground_Plane2" type="MeshInstance" parent="."]
-transform = Transform( 0.497549, 0, 0, 0, 0.292359, 0, 0, 0, 0.497549, -8.68109, 0, -26.3775 )
-mesh = SubResource( 2 )
-skeleton = NodePath("")
+[node name="Teleport6" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2239, 4.01963, 0 )
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Teleport6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.492706, 2.43356, 0 )
+shape = SubResource( 7 )
+
+[node name="Exit" type="Position3D" parent="Teleport6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.05788, 3.15986, -4.76837e-07 )
+
+[node name="Teleport7" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2239, 4.01963, 0 )
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Teleport7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4006, -9.52632, 0 )
+shape = SubResource( 8 )
+
+[node name="Exit" type="Position3D" parent="Teleport7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0236, 6.28407, -4.76837e-07 )
+
+[node name="LightPickup" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.35247, 13.4559, 2.38419e-07 )
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource( 7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="LightPickup"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.389134, 0 )
+shape = SubResource( 4 )
+
+[node name="Flashlight" type="Spatial" parent="LightPickup"]
+transform = Transform( 0.885067, -0.0315579, 0.464393, 0.0263566, 0.999496, 0.0176889, -0.464717, -0.00341602, 0.885453, -0.280289, 0.733097, 0.891639 )
+
+[node name="Mesh" type="MeshInstance" parent="LightPickup/Flashlight"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 5 )
 material/0 = null
+
+[node name="Mesh2" type="MeshInstance" parent="LightPickup/Flashlight"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.15, 0, 0 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="Mesh3" type="MeshInstance" parent="LightPickup/Flashlight"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.224754, 0, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="SpotLight" type="SpotLight" parent="LightPickup/Flashlight"]
+transform = Transform( 0, 2.32831e-10, -1, -1.86265e-09, 1, -2.79397e-09, 1, -2.32831e-09, -8.9407e-08, 0.367523, 0, -1.19209e-07 )
+shadow_enabled = true
+spot_range = 13.4397
+spot_angle = 44.2731
+
+[node name="FlagPickup" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0841472, 16.5039, 2.38419e-07 )
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource( 9 )
+
+[node name="CollisionShape" type="CollisionShape" parent="FlagPickup"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53948, 0 )
+shape = SubResource( 4 )
+
+[node name="Flag" type="Spatial" parent="FlagPickup"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.342462, 1.91959, -0.778323 )
+
+[node name="Sprite3D" type="Sprite3D" parent="FlagPickup/Flag"]
+pixel_size = 0.1
+texture = ExtResource( 8 )
+
+[node name="End" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7978, 0.527561, 2.38419e-07 )
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource( 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="End"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53948, 0 )
+shape = SubResource( 4 )
 
 [connection signal="body_entered" from="Teleport" to="Teleport" method="_on_Teleport_body_entered"]
 [connection signal="body_entered" from="Teleport2" to="Teleport2" method="_on_Teleport_body_entered"]
 [connection signal="body_entered" from="Teleport3" to="Teleport3" method="_on_Teleport_body_entered"]
 [connection signal="body_entered" from="Teleport4" to="Teleport4" method="_on_Teleport_body_entered"]
 [connection signal="body_entered" from="Teleport5" to="Teleport5" method="_on_Teleport_body_entered"]
+[connection signal="body_entered" from="Teleport6" to="Teleport6" method="_on_Teleport_body_entered"]
+[connection signal="body_entered" from="Teleport7" to="Teleport7" method="_on_Teleport_body_entered"]
+[connection signal="body_entered" from="LightPickup" to="LightPickup" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="FlagPickup" to="FlagPickup" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="End" to="End" method="_on_Area_body_entered"]
